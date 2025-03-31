@@ -1,0 +1,112 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    font-family: "Nova Round", system-ui;
+    color:#fbffff;
+    background-color: #F3F3F1;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+main{
+    border: none;
+    background: url(img/fondo_proyecto.jpg); 
+    /* Evita que la imagen se repita */
+    background-repeat: no-repeat; 
+    /* Hace que la imagen cubra toda el área del card */
+    background-size: cover;  
+    border-radius: 15px;
+    padding: 20px;    
+    width: 300px;
+    height: 600px;
+    /* Sombra */
+    box-shadow: 0 6px 22px rgba(0, 0, 0, 0.7);
+
+}
+.contenedor-perfil{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+.imagen-perfil {
+    width: 70px;
+    border-radius: 50%;
+    margin-top: 40px;
+}
+.info-perfil{
+    text-align: center;
+    margin-bottom: 32px;
+}
+.contenedor-btn{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* espaciado entre elementos secundarios */
+    gap: 16px;
+    margin-bottom: 40px;
+}
+.btn-pagina{
+    position: relative;
+    width: 100%;
+}
+.btn-link{
+    text-decoration: none;
+}
+
+.btn-sombra{
+    position: absolute;
+    top: 7px;
+    left: 7.5px;
+    width: 300px;
+    height: 56px;    
+    background-color: white;
+    border-radius: 8px;
+    /* indica el orden de los elementos posicionados y sus descendientes.  */
+    z-index: 1;
+}
+.btn-link{
+    position: relative;
+    display: block;
+    background-color: #C94C44;
+    color: #ededed;
+    text-decoration: none;
+    padding: 14px 14px 22px 14px;
+    border-radius: 6px;
+    border: 2px solid #fbffff;
+    text-align: center;
+    font-weight: 500;
+    font-size: 13px;
+    /* indica el orden de los elementos posicionados y sus descendientes.  */
+    z-index: 2;
+    /* Movimiento */
+    transition: background-color 0.3s;
+}
+.btn-link:hover{
+    transform: translateX(+3px) translateY(+3px);
+    background-color: #E55C5C;
+}
+
+.redes-sociales{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+
+}
+.redes-sociales-icon{
+    text-decoration: none;
+    transition: transform 0.3s;
+    
+}
+.redes-sociales-icon:hover {
+    transform: scale(1.2);
+}
+.redes-sociales-icon img{
+    width: 30px;
+}
