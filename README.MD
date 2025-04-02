@@ -1,58 +1,89 @@
-Aquí tienes el contenido convertido a formato Markdown:
+# Proyecto 101: Desarrollo de Perfil Personal Web
 
-```markdown
-# Proyecto 101
+## Contenido
+- [Introducción](#introducción)
+- [Requisitos Previos](#requisitos-previos)
+- [Configuración del Entorno](#configuración-del-entorno)
+  - [Creación del Repositorio en GitHub](#creación-del-repositorio-en-github)
+  - [Clonación del Repositorio Local](#clonación-del-repositorio-local)
+- [Estructura del Proyecto](#estructura-del-proyecto)
+- [Desarrollo del Sitio](#desarrollo-del-sitio)
+  - [HTML (index.html)](#html-indexhtml)
+  - [CSS (styles.css)](#css-stylescss)
+  - [JavaScript (app.js)](#javascript-appjs)
+- [Personalización del Proyecto](#personalización-del-proyecto)
+- [Despliegue](#despliegue)
+- [Solución de Problemas Comunes](#solución-de-problemas-comunes)
+- [Recursos Adicionales](#recursos-adicionales)
 
-### 1. **Creación del Repositorio en GitHub**
-Primero, necesitarás un repositorio en GitHub para poder almacenar tu código. Vamos a seguir los siguientes pasos:
+## Introducción
 
-1. **Iniciar sesión en GitHub**: Si no tienes cuenta, regístrate en [GitHub](https://github.com).
+Este proyecto te guiará en la creación de una página web de perfil personal responsiva utilizando HTML, CSS y JavaScript. Al finalizar, tendrás un sitio web profesional que podrás personalizar y utilizar como carta de presentación en línea.
+
+## Requisitos Previos
+
+Antes de comenzar, asegúrate de tener instalado:
+- Git ([descargar aquí](https://git-scm.com/downloads))
+- Un editor de código (recomendamos [Visual Studio Code](https://code.visualstudio.com/))
+- Navegador web moderno (Chrome, Firefox, etc.)
+- Cuenta en GitHub ([crear cuenta](https://github.com/join))
+
+## Configuración del Entorno
+
+### Creación del Repositorio en GitHub
+
+1. **Inicia sesión en GitHub**: Accede a tu cuenta en [GitHub](https://github.com).
    
-2. **Crear un nuevo repositorio**:
-   - Haz clic en el icono de **+** en la esquina superior derecha de la pantalla y selecciona **New repository**.
-   - Dale un nombre al repositorio, por ejemplo, `perfil-personal`.
-   - Selecciona si quieres que el repositorio sea público o privado.
+2. **Crea un nuevo repositorio**:
+   - Haz clic en el icono de **+** en la esquina superior derecha y selecciona **New repository**.
+   - Nombra tu repositorio (ej. `perfil-personal`).
+   - Elige la visibilidad (público o privado).
+   - Marca la opción "Initialize this repository with a README" para crear un README inicial.
    - Haz clic en **Create repository**.
 
-### 2. **Clonar el Repositorio**
-Una vez creado el repositorio, necesitas clonarlo en tu máquina local para empezar a trabajar en el proyecto.
+   ![Ejemplo creación repositorio](https://placeholder-image.com/github-repo-creation.png)
 
-1. Copia la URL del repositorio de GitHub. Debería verse algo como esto: `https://github.com/tu_usuario/perfil-personal.git`
+### Clonación del Repositorio Local
+
+1. En tu repositorio de GitHub, haz clic en el botón verde **Code** y copia la URL.
    
-2. En tu terminal, navega hasta el directorio donde quieras guardar el proyecto y usa el siguiente comando para clonar el repositorio:
+2. Abre tu terminal y navega al directorio donde deseas guardar el proyecto:
    ```bash
+   # Navega a tu directorio de trabajo
+   cd ruta/a/tu/directorio
+
+   # Clona el repositorio
    git clone https://github.com/tu_usuario/perfil-personal.git
-   ```
-   
-3. Después de clonar el repositorio, navega hasta la carpeta del repositorio:
-   ```bash
+
+   # Entra al directorio del proyecto
    cd perfil-personal
    ```
 
-### 3. **Estructura de Archivos**
-Una vez que hayas clonado el repositorio, crea la siguiente estructura de archivos en tu directorio local:
+## Estructura del Proyecto
+
+Crea la siguiente estructura de archivos en tu directorio local:
 
 ```
 perfil-personal/
 │
-├── index.html
-├── styles.css
-├── app.js
-├── img/
-│   ├── foto-perfil.png
-│   ├── fondo_proyecto.jpg
-│   ├── twitter.svg
+├── index.html          # Archivo HTML principal
+├── styles.css          # Estilos CSS 
+├── app.js              # Lógica JavaScript
+├── img/                # Directorio para imágenes
+│   ├── foto-perfil.png # Tu foto de perfil
+│   ├── fondo_proyecto.jpg # Imagen de fondo
+│   ├── twitter.svg     # Iconos de redes sociales
 │   ├── facebook.svg
 │   ├── instagram.svg
 │   └── github.svg
-└── README.md
+└── README.md           # Documentación del proyecto
 ```
 
-### 4. **Crear los Archivos HTML, CSS y JS**
-A continuación, vamos a crear los archivos `index.html`, `styles.css` y `app.js` con el código que proporcionaste.
+## Desarrollo del Sitio
 
-#### 4.1 **index.html**
-Crea el archivo `index.html` y agrega el siguiente código:
+### HTML (index.html)
+
+El archivo HTML define la estructura de la página web:
 
 ```html
 <!DOCTYPE html>
@@ -72,7 +103,7 @@ Crea el archivo `index.html` y agrega el siguiente código:
             <img class="imagen-perfil" src="img/foto-perfil.png" alt="Foto de perfil">
         </div>
         <div class="info-perfil" id="info-perfil">
-            <!-- Inserciones desde JavaScript -->
+            <!-- Contenido insertado dinámicamente desde JavaScript -->
         </div>
         <div class="contenedor-btn">
             <div class="btn-pagina">
@@ -89,16 +120,16 @@ Crea el archivo `index.html` y agrega el siguiente código:
             </div>
         </div>
         <div class="redes-sociales">
-            <a href="https://x.com/JRyL_01" class="redes-sociales-icon" target="_blank">
+            <a href="https://x.com/TuUsuario" class="redes-sociales-icon" target="_blank">
                 <img src="img/twitter.svg" alt="icon-twitter">
             </a>
-            <a href="https://www.facebook.com/" class="redes-sociales-icon" target="_blank">
+            <a href="https://www.facebook.com/TuUsuario" class="redes-sociales-icon" target="_blank">
                 <img src="img/facebook.svg" alt="icon-facebook">
             </a>
-            <a href="https://www.instagram.com/jose_ryl/" class="redes-sociales-icon" target="_blank">
+            <a href="https://www.instagram.com/TuUsuario" class="redes-sociales-icon" target="_blank">
                 <img src="img/instagram.svg" alt="icon-instagram">
             </a>
-            <a href="https://github.com/Pixel-26/reading-notes" class="redes-sociales-icon" target="_blank">
+            <a href="https://github.com/TuUsuario" class="redes-sociales-icon" target="_blank">
                 <img src="img/github.svg" alt="icon-github">
             </a>
         </div>
@@ -108,8 +139,9 @@ Crea el archivo `index.html` y agrega el siguiente código:
 </html>
 ```
 
-#### 4.2 **styles.css**
-Crea el archivo `styles.css` y agrega el siguiente código:
+### CSS (styles.css)
+
+El archivo CSS contiene los estilos que definen la apariencia visual:
 
 ```css
 * {
@@ -211,16 +243,30 @@ main {
 .redes-sociales-icon img {
     width: 30px;
 }
+
+/* Reglas de media queries para responsividad */
+@media (max-width: 768px) {
+    main {
+        width: 280px;
+        height: 580px;
+    }
+    
+    .redes-sociales {
+        gap: 120px;
+    }
+}
 ```
 
-#### 4.3 **app.js**
-Crea el archivo `app.js` y agrega el siguiente código:
+### JavaScript (app.js)
+
+El archivo JavaScript añade interactividad y contenido dinámico a la página:
 
 ```javascript
-let divDOM =  document.getElementById("info-perfil");
+// Insertar información del perfil dinámicamente
+let divDOM = document.getElementById("info-perfil");
 divDOM.innerHTML =
-                `<h1>José Romero</h1>
-                <p>Desarrollador Software</p>`;
+                `<h1>Tu Nombre</h1>
+                <p>Tu Profesión</p>`;
 
 // Modificar el estilo del <h1>
 let h1 = divDOM.querySelector("h1"); 
@@ -233,23 +279,71 @@ let p = divDOM.querySelector("p");
 p.style.fontSize = "14px";  
 p.style.marginTop = '10px';   
 p.style.fontWeight = '400'; 
+
+// Ejemplo de validación de enlaces
+document.querySelectorAll('.btn-link').forEach(link => {
+    link.addEventListener('click', function(e) {
+        // Si el enlace no tiene href específico, prevenir navegación
+        if (this.getAttribute('href') === '#') {
+            e.preventDefault();
+            console.log('Enlace aún no configurado');
+            // Opcional: Mostrar alerta al usuario
+            alert('¡Esta sección está en desarrollo!');
+        }
+    });
+});
 ```
 
-### 5. **Agregar Archivos de Imagen**
-Asegúrate de tener las imágenes mencionadas en tu estructura de directorios (`img/foto-perfil.png`, `img/fondo_proyecto.jpg`, etc.). Puedes descargarlas o agregar imágenes que tú mismo crees o tengas.
+## Personalización del Proyecto
 
-### 6. **Commit y Push**
-Una vez tengas los archivos creados, haz commit y push para subirlos a GitHub.
+Para personalizar tu perfil:
+
+1. **Foto de perfil**: Reemplaza `img/foto-perfil.png` con tu imagen personal.
+2. **Imagen de fondo**: Cambia `img/fondo_proyecto.jpg` por un fondo de tu elección.
+3. **Información personal**: Modifica el contenido en `app.js` con tu nombre y profesión.
+4. **Redes sociales**: Actualiza los enlaces en `index.html` con tus perfiles.
+5. **Esquema de colores**: Personaliza los colores en `styles.css` según tus preferencias.
+
+## Despliegue
+
+Para subir tu proyecto a GitHub:
 
 ```bash
+# Añadir todos los archivos al staging
 git add .
-git commit -m "Primer commit - estructura básica de proyecto"
+
+# Crear un commit con descripción
+git commit -m "Implementación inicial del perfil personal"
+
+# Subir los cambios a GitHub
 git push origin main
 ```
 
-### 7. **Ver el Proyecto**
-Una vez que todo esté subido a GitHub, puedes abrir el archivo `index.html` en tu navegador para ver cómo se ve tu página. 
+Para publicar tu sitio web utilizando GitHub Pages:
+1. Ve a la configuración de tu repositorio
+2. Desplázate hasta la sección "GitHub Pages"
+3. En "Source", selecciona la rama "main"
+4. Guarda los cambios y espera a que se genere el enlace a tu sitio
 
-¡Y eso es todo! Ahora tendrás un proyecto funcional con HTML, CSS y JavaScript.
-```
+## Solución de Problemas Comunes
 
+### Las imágenes no se muestran
+- Verifica que las rutas de las imágenes sean correctas
+- Confirma que los archivos están en la carpeta `img/`
+- Asegúrate de haber subido las imágenes al repositorio
+
+### Los estilos CSS no se aplican
+- Revisa que el archivo `styles.css` esté correctamente enlazado en el HTML
+- Verifica que no haya errores de sintaxis en tu CSS
+
+### El JavaScript no funciona
+- Abre la consola del navegador para ver posibles errores
+- Verifica que el archivo `app.js` esté correctamente enlazado al final del HTML
+
+## Recursos Adicionales
+
+- [Documentación de HTML (MDN)](https://developer.mozilla.org/es/docs/Web/HTML)
+- [Guía de CSS (MDN)](https://developer.mozilla.org/es/docs/Web/CSS)
+- [Tutorial de JavaScript (MDN)](https://developer.mozilla.org/es/docs/Web/JavaScript/Guide)
+- [Documentación de Git](https://git-scm.com/doc)
+- [GitHub Pages](https://pages.github.com/)
